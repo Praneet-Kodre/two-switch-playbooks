@@ -1,0 +1,2 @@
+# switch_name, l3_port, my_ip, my_as, peer_ip, peer_as
+gui-spine1, 9, 10.1.1.1/30, 65001, 10.1.1.2, 65001
