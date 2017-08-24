@@ -4,6 +4,7 @@
 <test name="Test">
     <!-- Mandatory parameters -->
     <!-- VCF Manager parameters -->
+    <parameter name= "switchIp" value=""></parameter>
     <parameter name="gatewayIp" value="10.9.9.1"></parameter> 
     <parameter name="hostFile" value="src/test/resources/gui-spines-host"></parameter>
     <parameter name="vlanCsvFile" value="src/test/resources/l2vrrp-vlan.csv"></parameter>

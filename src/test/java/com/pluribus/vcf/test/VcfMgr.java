@@ -67,7 +67,7 @@ public class VcfMgr extends TestSetup{
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
-		Thread.sleep(120000); 
+		Thread.sleep(30000); 
 	}
 	
 	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","ospfCsvFile","password","gatewayIp"})
@@ -85,6 +85,7 @@ public class VcfMgr extends TestSetup{
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
+		Thread.sleep(30000);
 	}
 	
 	@Parameters({"hostFile", "vlanCsvFile", "vrrpCsvFile","password","gatewayIp"})
@@ -102,6 +103,7 @@ public class VcfMgr extends TestSetup{
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
+		Thread.sleep(30000);
 	}
 	
 	@Parameters({"hostFile", "vlanCsvFile", "password","gatewayIp"})
@@ -120,5 +122,4 @@ public class VcfMgr extends TestSetup{
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
 	}
-	
 }

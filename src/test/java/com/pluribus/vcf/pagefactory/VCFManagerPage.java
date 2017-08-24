@@ -104,26 +104,7 @@ public class VCFManagerPage extends PageInfra {
 		}
 		return status;
 	}
-	/*
-	public boolean addSeedSwitch(String switchName, String password) throws Exception {
-		boolean status = false;
-		waitForElementVisibility(addFabric,100);
-		addFabric.click();
-		waitForElementToClick(By.cssSelector(addSeedId),180);
-		driver.findElement(By.cssSelector(addSeedId)).click();
-		waitForElementToClick(By.cssSelector(seedWindowId),100);
-		WebElement switchSelect = driver.findElement(By.cssSelector(switchSelectId));
-		selectElement(switchSelect,switchName);
-		setValue(driver.findElement(By.cssSelector(userIdField)),"network-admin");
-		setValue(driver.findElement(By.cssSelector(pwdField)),password);
-		WebElement successButton = driver.findElement(By.cssSelector(successButtonId));
-		successButton.click();
-		Thread.sleep(5000); //waiting for success message to go away
-		waitForElementToClick(By.cssSelector("div.main-content-box"),100);
-		status = getSeedSwitchDiscoveryStatus(switchName,10);
-		return status;
-	}
-	*/
+	
 	//Verify seed switch successful add
 	public boolean getSeedSwitchDiscoveryStatus (String switchName, int iter) throws Exception{
 		boolean status = false;
@@ -275,7 +256,7 @@ public class VCFManagerPage extends PageInfra {
 		
 		List <WebElement> statusTabs = driver.findElements(By.cssSelector(progressBar));
 		if((statusTabs.get(0).getText().contains("Fabric configured"))&&(statusTabs.get(1).getText().contains("Verify Topology"))) {
-			com.jcabi.log.Logger.info("playbookConfig","Status bars: "+statusTabs.get(0).getText()+statusTabs.get(1).getText());
+			com.jcabi.log.Logger.info("playbookConfig","Status bars: "+statusTabs.get(0).getText()+","+statusTabs.get(1).getText());
 			com.jcabi.log.Logger.info("playbookConfig","Verified status bar message after fabric reset playbook was successfully run");
 		} else {
 			com.jcabi.log.Logger.error("playbookConfig","Status bar messages are incorrect"+statusTabs.get(0).getText()+" "+statusTabs.get(1).getText());
@@ -350,6 +331,7 @@ public class VCFManagerPage extends PageInfra {
 			if(isElementActive(By.cssSelector(successMsg))) {
 				String message = driver.findElement(By.cssSelector(successMsg)).getText();
 				com.jcabi.log.Logger.info("playbookConfig",message);
+				driver.findElement(By.cssSelector(playbookCloseButton)).click();
 				successMessageFound = true;
 				break;
 			}
@@ -366,7 +348,7 @@ public class VCFManagerPage extends PageInfra {
 			com.jcabi.log.Logger.error("playbookConfig","Playbook "+playbookName+" did not complete. Success message was not found");
 			return successMessageFound;
 		}
-		
+		Thread.sleep(30000); //Sleeping to allow the fabric map to be displayed longer
 		return true;
 	}
 	
