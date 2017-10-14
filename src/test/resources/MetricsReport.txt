@@ -1,0 +1,55 @@
+Time for Sample  : Sat Oct 14 20:11:13 IST 2017
+=================================================
+Total Memory : 1916672
+Free Memory : 1531539
+Memory Performance in Percentage : 79.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.55
+CPU Performance in Percentage : 6.875
+System Average Systemload Load is fine
+Time for Sample  : Sat Oct 14 20:14:14 IST 2017
+=================================================
+Total Memory : 1916699
+Free Memory : 1473176
+Memory Performance in Percentage : 76.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.37
+CPU Performance in Percentage : 4.625
+System Average Systemload Load is fine
+Time for Sample  : Sat Oct 14 20:17:14 IST 2017
+=================================================
+Total Memory : 1916699
+Free Memory : 1543623
+Memory Performance in Percentage : 80.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.29
+CPU Performance in Percentage : 3.625
+System Average Systemload Load is fine
+Time for Sample  : Sat Oct 14 20:20:15 IST 2017
+=================================================
+Total Memory : 1916714
+Free Memory : 1580360
+Memory Performance in Percentage : 82.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 1.15
+CPU Performance in Percentage : 14.375
+System Average Systemload Load is fine
+Time for Sample  : Sat Oct 14 20:23:15 IST 2017
+=================================================
+Total Memory : 1916718
+Free Memory : 1505535
+Memory Performance in Percentage : 78.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.1
+CPU Performance in Percentage : 1.25
+System Average Systemload Load is fine

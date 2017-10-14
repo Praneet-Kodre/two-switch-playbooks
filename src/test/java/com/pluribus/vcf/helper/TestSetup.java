@@ -115,7 +115,7 @@ public class TestSetup {
    }
    @Parameters({"vcfIp","browser","local","bsUserId","bsKey","jenkins"}) 
    @BeforeClass(alwaysRun = true)
-   public void initDriver(String vcfIp, String browser, @Optional("0")String local,@Optional("pratikdam1")String bsUserId, @Optional("uZCXEzKXwgzgzMr3G7R6") String bsKey,@Optional("0")String jenkins) throws Exception{
+   public void initDriver(String vcfIp, String browser, @Optional("1")String local,@Optional("pratikdam1")String bsUserId, @Optional("uZCXEzKXwgzgzMr3G7R6") String bsKey,@Optional("1")String jenkins) throws Exception{
 	   if(Integer.parseInt(local)==1) {
 		   startDriver(vcfIp,browser);
 	   }

@@ -56,7 +56,13 @@ public class PageInfra {
         waitForElementVisibility(field, 50);
         builder.moveToElement(field).click(field2).build().perform();
     }
-   
+
+    public void textToBePresentInElementValue(By locator, String Text) {
+        Boolean el
+                = (new WebDriverWait(driver, 10))
+                .until(ExpectedConditions.textToBePresentInElementValue(locator, Text));
+    }
+    
     public void waitForElementPresent(By locator) {
         WebElement el
                 = (new WebDriverWait(driver, 10))

@@ -4,13 +4,13 @@
 <test name="Test">
     <!-- Mandatory parameters -->
     <!-- VCF Manager parameters -->
-    <parameter name= "switchIp" value=""></parameter>
-    <parameter name="gatewayIp" value="10.9.9.1"></parameter> 
-    <parameter name="hostFile" value="src/test/resources/gui-spines-host"></parameter>
-    <parameter name="vlanCsvFile" value="src/test/resources/l2vrrp-vlan.csv"></parameter>
-    <parameter name="vrrpCsvFile" value="src/test/resources/l2vrrp-vrrp.csv"></parameter>
-    <parameter name="ospfCsvFile" value="src/test/resources/ospfCsvFile.csv"></parameter>
-    <parameter name="bgpCsvFile" value="src/test/resources/bgpCsvFile.csv"></parameter>    
+    <parameter name="gatewayIp" value="10.110.0.1"></parameter> 
+    <parameter name="hostFile" value="src/test/resources/us-gui leaf3-4.txt"></parameter>
+    <parameter name="vlanCsvFile" value="src/test/resources/vlan.csv"></parameter>
+    <parameter name="vrrpCsvFile" value="src/test/resources/vrrp.csv"></parameter>
+    <parameter name="ospfCsvFile" value="src/test/resources/1ospf.csv"></parameter>
+    <parameter name="bgpCsvFile" value="src/test/resources/1bgp.csv"></parameter>    
+    <parameter name="Metrics" value="src/test/resources/MetricsReport.txt"></parameter>
         
     <!-- NOTE: Additional optional parameters are:
     	<parameter name="dataNodeHost" value="10.9.8.85"></parameter>
@@ -21,6 +21,7 @@
     	<parameter name= "flowName" value="flow1"></parameter>
 	//Currently these optional parameters are being set to default values if the user doesn't specify them.
    END OF NOTE -->
+
     <classes>
       <class name="com.pluribus.vcf.test.VcfMgr"/>	
     </classes>	

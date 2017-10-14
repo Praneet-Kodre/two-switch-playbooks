@@ -136,6 +136,7 @@ public class VCFManagerPage extends PageInfra {
 	}
 	
 	public void delAllSeedsVcfMgr() throws Exception{
+/*		waitForElementVisibility(addFabric, 100);
 		addFabric.click();
 		Thread.sleep(10000);
 		boolean status = false;
@@ -185,7 +186,7 @@ public class VCFManagerPage extends PageInfra {
 			Thread.sleep(5000);
 		}
 		waitForElementToClick(By.cssSelector(ztpMenuWindow),100);
-		waitForElementVisibility(driver.findElement(By.cssSelector(fabricNameFieldSel)),100);
+		textToBePresentInElementValue(By.cssSelector(fabricNameFieldSel),"gui-fabric");
 		WebElement fabricName = driver.findElement(By.cssSelector(fabricNameFieldSel));
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMddhh");
 	    String dateAsString = simpleDateFormat.format(new Date());

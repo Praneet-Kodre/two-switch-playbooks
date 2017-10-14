@@ -1,17 +1,13 @@
 package com.pluribus.vcf.test;
 
 import com.pluribus.vcf.helper.TestSetup;
-import com.jcabi.ssh.SSHByPassword;
-import com.jcabi.ssh.Shell;
-import com.pluribus.vcf.helper.PageInfra;
-import com.pluribus.vcf.helper.SwitchMethods;
+import com.pluribus.vcf.helper.MonitorMetrics;
 import com.pluribus.vcf.pagefactory.VCFLoginPage;
 import com.pluribus.vcf.pagefactory.VCFManagerPage;
 import com.pluribus.vcf.pagefactory.VCFHomePage;
-
-import static org.testng.Assert.assertEquals;
-
-import java.io.BufferedReader;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.InputStreamReader;
 
@@ -26,6 +22,8 @@ public class VcfMgr extends TestSetup{
 	private VCFManagerPage vcfMgr1;
 	private VCFLoginPage login;
 	private String vcfUserName = "admin";
+	private MonitorMetrics monitorMetrics;
+	private Thread t;
 	
 	@BeforeClass(alwaysRun = true)
 	public void init() throws Exception{
@@ -37,21 +35,39 @@ public class VcfMgr extends TestSetup{
 	@Parameters({"password"})
     @Test(groups = {"smoke","regression"}, description = "Login to VCF as admin  and Change Password")
     public void loginAdmin(@Optional("test123")String password) throws Exception{
-        login.firstlogin(vcfUserName,password);
-        login.waitForLogoutButton();
-        login.logout();
-        Thread.sleep(60000);
+		/*
+		 * login.firstlogin(vcfUserName,password); login.waitForLogoutButton();
+		 * login.logout(); Thread.sleep(60000);
+		 */
     }
 	
-	 @Parameters({"password"})  
-	    @Test(groups = {"smoke","regression"},dependsOnMethods={"loginAdmin"},description = "Login to VCF as test123 After Password Change")
-	    public void loginTest123(@Optional("test123")String password) throws Exception{
-	        login.login(vcfUserName, password);
-	        Thread.sleep(10000);
-	        login.waitForLogoutButton();
-	        Thread.sleep(60000);
-	        home1.gotoVCFMgr();
-	 	}
+	@Parameters({ "password", "Metrics"})
+	@Test(groups = { "smoke", "regression" }, dependsOnMethods = {
+			"loginAdmin" }, description = "Login to VCF as test123 After Password Change")
+	public void loginTest123(@Optional("test123") String password, String Metrics) throws Exception {
+		login.login(vcfUserName, password);
+		Thread.sleep(1000);
+		login.waitForLogoutButton();
+		
+		Robot r = null;
+		try {
+			r = new Robot();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_T);
+		r.keyRelease(KeyEvent.VK_CONTROL);
+		r.keyRelease(KeyEvent.VK_T);
+
+		File metricsFile = new File(Metrics);
+		monitorMetrics = new MonitorMetrics(getDriver(), metricsFile);
+		Thread t = new Thread(monitorMetrics);
+		t.start();
+		Thread.sleep(6000);
+		home1.gotoVCFMgr();
+	}
 	 
 	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","bgpCsvFile","password","gatewayIp"})
 	@Test(groups={"smoke","regression"},dependsOnMethods = {"loginTest123"},description="Configure L3 BGP - VRRP playbook")
@@ -67,10 +83,11 @@ public class VcfMgr extends TestSetup{
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
-		Thread.sleep(30000); 
+		//t.stop();
+		Thread.sleep(120000); 
 	}
 	
-	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","ospfCsvFile","password","gatewayIp"})
+/*	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","ospfCsvFile","password","gatewayIp"})
 	@Test(groups={"smoke","regression"},dependsOnMethods = {"runvrrpBgpPlaybook"},description="Configure L3 OSPF - VRRP playbook")
 	public void runvrrpOspfPlaybook(String hostFile, String vlanCsvFile, String vrrpCsvFile, String ospfCsvFile, @Optional("test123") String password,String gatewayIp) throws Exception {
 		vcfMgr1.clickOnBack();
@@ -121,5 +138,6 @@ public class VcfMgr extends TestSetup{
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
-	}
+	}*/
+	
 }
