@@ -62,7 +62,7 @@ public class TestSetup {
    
    @Parameters({"vcfIp","upgrade","git_revision","vcfc_version","buildNum"})
    @BeforeSuite(alwaysRun = true)
-   public void upgradeVCFC(String vcfIp,@Optional("0")String upgrade, @Optional("")String git_revision, @Optional("")String vcfc_version,@Optional("")String build_number) throws IOException,InterruptedException {
+   public void upgradeVCFC(String vcfIp,@Optional("1")String upgrade, @Optional("")String git_revision, @Optional("")String vcfc_version,@Optional("")String build_number) throws IOException,InterruptedException {
 	   if(Integer.parseInt(upgrade) == 1) {
 		Shell sh1 = new Shell.Verbose(
 	            new SSHByPassword(
@@ -115,7 +115,7 @@ public class TestSetup {
    }
    @Parameters({"vcfIp","browser","local","bsUserId","bsKey","jenkins"}) 
    @BeforeClass(alwaysRun = true)
-   public void initDriver(String vcfIp, String browser, @Optional("1")String local,@Optional("pratikdam1")String bsUserId, @Optional("uZCXEzKXwgzgzMr3G7R6") String bsKey,@Optional("1")String jenkins) throws Exception{
+   public void initDriver(String vcfIp, String browser, @Optional("0")String local,@Optional("pratikdam1")String bsUserId, @Optional("uZCXEzKXwgzgzMr3G7R6") String bsKey,@Optional("0")String jenkins) throws Exception{
 	   if(Integer.parseInt(local)==1) {
 		   startDriver(vcfIp,browser);
 	   }

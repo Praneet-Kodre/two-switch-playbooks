@@ -2,9 +2,7 @@ package com.pluribus.vcf.pagefactory;
 
 import com.jcabi.log.Logger;
 import com.pluribus.vcf.helper.PageInfra;
-
-import static org.testng.Assert.assertEquals;
-
+import java.nio.file.FileSystems;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -79,6 +77,7 @@ public class VCFManagerPage extends PageInfra {
 	String resetFabricCheckBox = "input[type='checkbox']";
 	String errorMsg = "div.inner-dialog-container.panel.panel-danger";
 	String successMsg = "div#success-message-dialog div.panel-body"; 
+	String toastMsg = "div.d3-tip"; 
 	
 	public VCFManagerPage(WebDriver driver) {
 		super(driver);

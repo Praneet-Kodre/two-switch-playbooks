@@ -35,20 +35,30 @@ public class VcfMgr extends TestSetup{
 	@Parameters({"password"})
     @Test(groups = {"smoke","regression"}, description = "Login to VCF as admin  and Change Password")
     public void loginAdmin(@Optional("test123")String password) throws Exception{
-		/*
-		 * login.firstlogin(vcfUserName,password); login.waitForLogoutButton();
-		 * login.logout(); Thread.sleep(60000);
-		 */
+		
+		 login.firstlogin(vcfUserName,password); login.waitForLogoutButton();
+		 login.logout(); Thread.sleep(60000);
+		 
     }
 	
-	@Parameters({ "password", "Metrics"})
-	@Test(groups = { "smoke", "regression" }, dependsOnMethods = {
-			"loginAdmin" }, description = "Login to VCF as test123 After Password Change")
-	public void loginTest123(@Optional("test123") String password, String Metrics) throws Exception {
+	@Parameters({ "password", "Metrics", "vcfIp"})
+	@Test(groups = { "smoke", "regression" }, description = "Login to VCF as test123 After Password Change")
+	public void loginTest123(@Optional("test123") String password, String Metrics, String vcfIp) throws Exception {
 		login.login(vcfUserName, password);
 		Thread.sleep(1000);
 		login.waitForLogoutButton();
-		
+
+		File metricsFile = new File(Metrics);
+		monitorMetrics = new MonitorMetrics(getDriver(), metricsFile, vcfIp, vcfUserName, password);
+		t = new Thread(monitorMetrics);
+		t.start();
+		Thread.sleep(6000);
+		home1.gotoVCFMgr();
+	}
+	 
+/*	@Parameters({"Metrics"})
+	@Test(groups={"smoke","regression"},description="Check Metrics")
+	public void RunMetrics(String Metrics) throws Exception {		
 		Robot r = null;
 		try {
 			r = new Robot();
@@ -67,8 +77,8 @@ public class VcfMgr extends TestSetup{
 		t.start();
 		Thread.sleep(6000);
 		home1.gotoVCFMgr();
-	}
-	 
+	}*/
+	
 	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","bgpCsvFile","password","gatewayIp"})
 	@Test(groups={"smoke","regression"},dependsOnMethods = {"loginTest123"},description="Configure L3 BGP - VRRP playbook")
 	public void runvrrpBgpPlaybook(String hostFile, String vlanCsvFile, String vrrpCsvFile, String bgpCsvFile, @Optional("test123") String password,String gatewayIp) throws Exception {
@@ -77,6 +87,7 @@ public class VcfMgr extends TestSetup{
 		if(file1.exists()) {
 			if(vcfMgr1.launchZTP(hostFile,vlanCsvFile,vrrpCsvFile,bgpCsvFile,"",password,"L3 BGP with VRRP",gatewayIp)) {
 				com.jcabi.log.Logger.info("vcfMgrconfig","L3 BGP playbook were configured successfully");
+				t.stop();
 			} else {
 				com.jcabi.log.Logger.error("vcfMgrconfig","L3 BGP Playbook were not configured successfully");
 			}

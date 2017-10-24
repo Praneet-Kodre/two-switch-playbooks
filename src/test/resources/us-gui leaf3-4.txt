@@ -1,0 +1,6 @@
+#  This is the Ansible inventory file test
+[switch]
+ugui-9kleaf3 ansible_host=10.110.0.85 ansible_user="{{ SSH_USER }}" ansible_ssh_pass="{{ SSH_PASS }}"
+
+ugui-9kleaf4 ansible_host=10.110.0.86 ansible_user="{{ SSH_USER }}" ansible_ssh_pass="{{ SSH_PASS }}"
+
