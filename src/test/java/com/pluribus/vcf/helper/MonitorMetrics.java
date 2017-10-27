@@ -100,7 +100,7 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 
 				int totalMemorySamples = (Integer.parseInt(metricsProperties.getProperty("monitiorCycle"))
 						* Integer.parseInt(metricsProperties.getProperty("monitorPeriod")));
-				if (memPerformance > Integer.parseInt(metricsProperties.getProperty("memoryThreshold"))) {
+				if (memPerformance >= Integer.parseInt(metricsProperties.getProperty("memoryThreshold"))) {
 					printMetricsInFile.println("System memory performance is fine");
 				} else {
 					memoryThresholdViolationCount++;
@@ -124,13 +124,13 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 
 				int totalCpuSamples = (Integer.parseInt(metricsProperties.getProperty("monitiorCycle"))
 						* Integer.parseInt(metricsProperties.getProperty("monitorPeriod")));
-				if (cpuPerformance < Integer.parseInt(metricsProperties.getProperty("cpuThreshold"))) {
+				if (cpuPerformance <= Integer.parseInt(metricsProperties.getProperty("cpuThreshold"))) {
 					printMetricsInFile.println("System Average Systemload Load is fine");
 				} else {
 					cpuThresholdViolationCount++;
 					printMetricsInFile.println(cpuThresholdViolationCount + " System Average Load Sample resulted in Violation");
 					float cpuViolationPercentage = (((float) cpuThresholdViolationCount) / totalCpuSamples) * 100;
-					if (cpuViolationPercentage > Float.valueOf(metricsProperties.getProperty("cpuViolationThreshold"))) {
+					if (cpuViolationPercentage >= Float.valueOf(metricsProperties.getProperty("cpuViolationThreshold"))) {
 						printMetricsInFile.println(cpuThresholdViolationCount + " out of " + totalCpuSamples
 								+ " CPU Monitoring samples resulted in violations from the permitted "
 								+ metricsProperties.getProperty("cpuViolationThreshold") + " violation so result is FAILURE");
