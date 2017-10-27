@@ -110,7 +110,7 @@ public class TestSetup {
 		out1 = new Shell.Plain(sh1).exec("/home/vcf/srv/vcf/bin/stop-vcfc.sh");
 		Thread.sleep(10000);
 		out1 = new Shell.Plain(sh1).exec("/home/vcf/srv/vcf/bin/start-vcfc.sh");
-		Thread.sleep(30000);
+		Thread.sleep(180000);
 	}
    }
    @Parameters({"vcfIp","browser","local","bsUserId","bsKey","jenkins"}) 

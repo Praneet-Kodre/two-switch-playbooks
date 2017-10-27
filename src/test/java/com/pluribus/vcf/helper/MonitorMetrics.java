@@ -36,6 +36,8 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 	private static StringBuffer result;
 	private String metricsUserName;
 	private String metricsPassword;
+	int memoryThresholdViolationCount = 0;
+	int cpuThresholdViolationCount = 0;
 
 	public MonitorMetrics(WebDriver driver, File metricsFile, String vcfIp, String vcfUserName, String password) throws IOException {
 		super(driver);
@@ -49,8 +51,7 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 
 	public void runMetrics() throws InterruptedException, IOException {
 
-		int memoryThresholdViolationCount = 0;
-		int cpuThresholdViolationCount = 0;
+
 
 		try {
 
