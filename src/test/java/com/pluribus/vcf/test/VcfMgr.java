@@ -41,17 +41,19 @@ public class VcfMgr extends TestSetup{
 		 
     }
 	
-	@Parameters({ "password", "Metrics", "vcfIp"})
+	@Parameters({ "password", "metrics", "vcfIp", "enableMetrics"})
 	@Test(groups = { "smoke", "regression" }, description = "Login to VCF as test123 After Password Change")
-	public void loginTest123(@Optional("test123") String password, String Metrics, String vcfIp) throws Exception {
+	public void loginTest123(@Optional("test123") String password, String metrics, String vcfIp,@Optional("0")  String enableMetrics) throws Exception {
 		login.login(vcfUserName, password);
 		Thread.sleep(1000);
 		login.waitForLogoutButton();
 
-		File metricsFile = new File(Metrics);
+		if(Integer.parseInt(enableMetrics)==1) {
+		File metricsFile = new File(metrics);
 		monitorMetrics = new MonitorMetrics(getDriver(), metricsFile, vcfIp, vcfUserName, password);
 		t = new Thread(monitorMetrics);
 		t.start();
+		}
 		Thread.sleep(6000);
 		home1.gotoVCFMgr();
 	}
@@ -87,14 +89,15 @@ public class VcfMgr extends TestSetup{
 		if(file1.exists()) {
 			if(vcfMgr1.launchZTP(hostFile,vlanCsvFile,vrrpCsvFile,bgpCsvFile,"",password,"L3 BGP with VRRP",gatewayIp)) {
 				com.jcabi.log.Logger.info("vcfMgrconfig","L3 BGP playbook were configured successfully");
-				t.stop();
 			} else {
 				com.jcabi.log.Logger.error("vcfMgrconfig","L3 BGP Playbook were not configured successfully");
 			}
 		} else {
 			com.jcabi.log.Logger.error("vcfMgrconfig", "File doesn't exist");
 		}
-		//t.stop();
+		if(t != null) {
+		t.stop();
+		}
 		Thread.sleep(120000); 
 	}
 	

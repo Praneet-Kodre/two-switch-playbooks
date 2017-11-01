@@ -10,7 +10,7 @@
     <parameter name="vrrpCsvFile" value="src/test/resources/vrrp.csv"></parameter>
     <parameter name="ospfCsvFile" value="src/test/resources/1ospf.csv"></parameter>
     <parameter name="bgpCsvFile" value="src/test/resources/1bgp.csv"></parameter>    
-    <parameter name="Metrics" value="src/test/resources/MetricsReport.txt"></parameter>
+    <parameter name="metrics" value="src/test/resources/metricsReport.txt"></parameter>
         
     <!-- NOTE: Additional optional parameters are:
     	<parameter name="dataNodeHost" value="10.9.8.85"></parameter>

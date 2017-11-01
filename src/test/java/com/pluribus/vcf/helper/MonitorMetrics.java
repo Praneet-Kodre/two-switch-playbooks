@@ -43,7 +43,7 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 		super(driver);
 		this.localMetricsFile = metricsFile;
 		metricsProperties = new Properties();
-		metricsProperties.loadFromXML(new FileInputStream("Metrics.xml"));
+		metricsProperties.loadFromXML(new FileInputStream("metrics.xml"));
 		this.vcfIpForMetrics = vcfIp;
 		this.metricsUserName = vcfUserName;
 		this.metricsPassword = password;
