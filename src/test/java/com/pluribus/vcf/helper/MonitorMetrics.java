@@ -43,7 +43,7 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 		super(driver);
 		this.localMetricsFile = metricsFile;
 		metricsProperties = new Properties();
-		metricsProperties.loadFromXML(new FileInputStream("Metrics.xml"));
+		metricsProperties.loadFromXML(new FileInputStream("metrics.xml"));
 		this.vcfIpForMetrics = vcfIp;
 		this.metricsUserName = vcfUserName;
 		this.metricsPassword = password;
@@ -87,53 +87,73 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 			String json = result.toString();
 				ObjectMapper mapper = new ObjectMapper();
 				Map<String, Object> obj = mapper.readValue(json, Map.class);
+				printLogs("info", "metricsFile", "=================================================");
+				printLogs("info", "metricsFile", "Time when below Sample was taken : " + Calendar.getInstance().getTime());
+				printLogs("info", "metricsFile", "=================================================");
 				printMetricsInFile.println("=================================================");
 				printMetricsInFile.println("Time when below Sample was taken : " + Calendar.getInstance().getTime());
 				printMetricsInFile.println("=================================================");
 				int mem = (Integer) obj.get("mem");
 				int freeMem = (Integer) obj.get("mem.free");
+				printLogs("info", "metricsFile", "Total Memory : " + mem);
+				printLogs("info", "metricsFile", "Free Memory : " + freeMem);
 				printMetricsInFile.println("Total Memory : " + mem);
 				printMetricsInFile.println("Free Memory : " + freeMem);
 				float memPerformance;
 				memPerformance = (float) ((freeMem * 100) / mem);
+				printLogs("info", "metricsFile", "Memory Performance in Percentage : " + memPerformance);
 				printMetricsInFile.println("Memory Performance in Percentage : " + memPerformance);
 
 				int totalMemorySamples = (Integer.parseInt(metricsProperties.getProperty("monitiorCycle"))
 						* Integer.parseInt(metricsProperties.getProperty("monitorPeriod")));
 				if (memPerformance >= Integer.parseInt(metricsProperties.getProperty("memoryThreshold"))) {
+					printLogs("info", "metricsFile", "System memory performance is fine");
 					printMetricsInFile.println("System memory performance is fine");
 				} else {
 					memoryThresholdViolationCount++;
+					printLogs("info", "metricsFile", memoryThresholdViolationCount + " Memory Sample resulted in Violation");
 					printMetricsInFile.println(memoryThresholdViolationCount + " Memory Sample resulted in Violation");
 					float memoryViolationPercentage = ((float) (memoryThresholdViolationCount) * 100) / totalMemorySamples;
 					if (memoryViolationPercentage >= Float.valueOf(metricsProperties.getProperty("memoryViolationThreshold"))) {
+						printLogs("info", "metricsFile", memoryThresholdViolationCount + " out of " + totalMemorySamples
+								+ " Memory Monitoring samples resulted in violations from the permitted "
+								+ metricsProperties.getProperty("memoryViolationThreshold") + "% violation so result is FAILURE");
 						printMetricsInFile.println(memoryThresholdViolationCount + " out of " + totalMemorySamples
 								+ " Memory Monitoring samples resulted in violations from the permitted "
-								+ metricsProperties.getProperty("memoryViolationThreshold") + " violation so result is FAILURE");
+								+ metricsProperties.getProperty("memoryViolationThreshold") + "% violation so result is FAILURE");
 					}
 				}
 
+				printLogs("info", "metricsFile", "=================================================");
 				printMetricsInFile.println("=================================================");
 				int processors = (Integer) obj.get("processors");
 				double systemloadAverage = (Double) obj.get("systemload.average");
+				printLogs("info", "metricsFile", "Total processors : " + processors);
+				printLogs("info", "metricsFile", "Average Systemload Load : " + systemloadAverage);
 				printMetricsInFile.println("Total processors : " + processors);
 				printMetricsInFile.println("Average Systemload Load : " + systemloadAverage);
 				float cpuPerformance;
 				cpuPerformance = (float) ((systemloadAverage * 100) / processors);
+				printLogs("info", "metricsFile", "CPU Performance in Percentage : " + cpuPerformance);
 				printMetricsInFile.println("CPU Performance in Percentage : " + cpuPerformance);
 
 				int totalCpuSamples = (Integer.parseInt(metricsProperties.getProperty("monitiorCycle"))
 						* Integer.parseInt(metricsProperties.getProperty("monitorPeriod")));
 				if (cpuPerformance <= Integer.parseInt(metricsProperties.getProperty("cpuThreshold"))) {
+					printLogs("info", "metricsFile", "System Average Systemload Load is fine");
 					printMetricsInFile.println("System Average Systemload Load is fine");
 				} else {
 					cpuThresholdViolationCount++;
+					printLogs("info", "metricsFile", cpuThresholdViolationCount + " System Average Load Sample resulted in Violation");
 					printMetricsInFile.println(cpuThresholdViolationCount + " System Average Load Sample resulted in Violation");
 					float cpuViolationPercentage = (((float) cpuThresholdViolationCount) / totalCpuSamples) * 100;
 					if (cpuViolationPercentage >= Float.valueOf(metricsProperties.getProperty("cpuViolationThreshold"))) {
+						printLogs("info", "metricsFile", cpuThresholdViolationCount + " out of " + totalCpuSamples
+								+ " CPU Monitoring samples resulted in violations from the permitted "
+								+ metricsProperties.getProperty("cpuViolationThreshold") + "% violation so result is FAILURE");
 						printMetricsInFile.println(cpuThresholdViolationCount + " out of " + totalCpuSamples
 								+ " CPU Monitoring samples resulted in violations from the permitted "
-								+ metricsProperties.getProperty("cpuViolationThreshold") + " violation so result is FAILURE");
+								+ metricsProperties.getProperty("cpuViolationThreshold") + "% violation so result is FAILURE");
 					}
 				}	
 			} else {
@@ -177,4 +197,14 @@ public class MonitorMetrics extends PageInfra implements Runnable {
 		}
 	}
 
+	public static void printLogs(String level, String methodName, String msg) {
+		if (level.equalsIgnoreCase("error")) {
+			com.jcabi.log.Logger.error(methodName, msg);
+		}
+		if (level.equalsIgnoreCase("info")) {
+			com.jcabi.log.Logger.info(methodName, msg);
+		}
+		//System.out.println(level + ": " + methodName + " " + msg);
+	}
+	
 }

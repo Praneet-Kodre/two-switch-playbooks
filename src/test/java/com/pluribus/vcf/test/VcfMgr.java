@@ -9,10 +9,10 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.InputStreamReader;
+import java.io.IOException;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
@@ -100,6 +100,27 @@ public class VcfMgr extends TestSetup{
 		}
 		Thread.sleep(120000); 
 	}
+	
+	   @Parameters({"switchIp"})
+	   @Test(groups={"smoke","regression"},dependsOnMethods = {"runvrrpBgpPlaybook"},description="Check L3 BGP - VRRP playbook Configuration")
+	   public void upgradeVCFC( @Optional("10.110.0.85")String switchIp) throws IOException,InterruptedException {
+		    Shell sh1 = new Shell.Verbose(
+		            new SSHByPassword(
+		            		switchIp,
+		                22,
+		                "network-admin",
+		                "test123"
+		            )
+		        );
+			//String out1;
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-show count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-interface-show count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-loopback-interface-show count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-show format bgp-as count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-show format bgp-redistribute count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-show format bgp-max-paths count-output"));
+			System.out.println(new Shell.Plain(sh1).exec("vrouter-bgp-neighbor-show count-output"));
+			}
 	
 /*	@Parameters({"hostFile","vlanCsvFile", "vrrpCsvFile","ospfCsvFile","password","gatewayIp"})
 	@Test(groups={"smoke","regression"},dependsOnMethods = {"runvrrpBgpPlaybook"},description="Configure L3 OSPF - VRRP playbook")

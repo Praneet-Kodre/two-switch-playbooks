@@ -1,0 +1,165 @@
+2017-11-08 15:31:02 INFO  metricsFile - =================================================
+2017-11-08 15:31:02 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:31:02 IST 2017
+2017-11-08 15:31:02 INFO  metricsFile - =================================================
+2017-11-08 15:31:02 INFO  metricsFile - Total Memory : 4263635
+2017-11-08 15:31:02 INFO  metricsFile - Free Memory : 2161050
+2017-11-08 15:31:02 INFO  metricsFile - Memory Performance in Percentage : 50.0
+2017-11-08 15:31:02 INFO  metricsFile - 1 Memory Sample resulted in Violation
+2017-11-08 15:31:02 INFO  metricsFile - =================================================
+2017-11-08 15:31:02 INFO  metricsFile - Total processors : 8
+2017-11-08 15:31:02 INFO  metricsFile - Average Systemload Load : 0.19
+2017-11-08 15:31:02 INFO  metricsFile - CPU Performance in Percentage : 2.375
+2017-11-08 15:31:02 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:32:13 INFO  metricsFile - =================================================
+2017-11-08 15:32:13 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:32:13 IST 2017
+2017-11-08 15:32:13 INFO  metricsFile - =================================================
+2017-11-08 15:32:13 INFO  metricsFile - Total Memory : 4263635
+2017-11-08 15:32:13 INFO  metricsFile - Free Memory : 2136621
+2017-11-08 15:32:13 INFO  metricsFile - Memory Performance in Percentage : 50.0
+2017-11-08 15:32:13 INFO  metricsFile - 2 Memory Sample resulted in Violation
+2017-11-08 15:32:13 INFO  metricsFile - =================================================
+2017-11-08 15:32:13 INFO  metricsFile - Total processors : 8
+2017-11-08 15:32:13 INFO  metricsFile - Average Systemload Load : 0.22
+2017-11-08 15:32:13 INFO  metricsFile - CPU Performance in Percentage : 2.75
+2017-11-08 15:32:13 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:33:24 INFO  metricsFile - =================================================
+2017-11-08 15:33:24 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:33:24 IST 2017
+2017-11-08 15:33:24 INFO  metricsFile - =================================================
+2017-11-08 15:33:24 INFO  metricsFile - Total Memory : 4263695
+2017-11-08 15:33:24 INFO  metricsFile - Free Memory : 2100401
+2017-11-08 15:33:24 INFO  metricsFile - Memory Performance in Percentage : 49.0
+2017-11-08 15:33:24 INFO  metricsFile - 3 Memory Sample resulted in Violation
+2017-11-08 15:33:24 INFO  metricsFile - 3 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:33:24 INFO  metricsFile - =================================================
+2017-11-08 15:33:24 INFO  metricsFile - Total processors : 8
+2017-11-08 15:33:24 INFO  metricsFile - Average Systemload Load : 0.15
+2017-11-08 15:33:24 INFO  metricsFile - CPU Performance in Percentage : 1.875
+2017-11-08 15:33:24 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:34:36 INFO  metricsFile - =================================================
+2017-11-08 15:34:36 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:34:36 IST 2017
+2017-11-08 15:34:36 INFO  metricsFile - =================================================
+2017-11-08 15:34:36 INFO  metricsFile - Total Memory : 4263695
+2017-11-08 15:34:36 INFO  metricsFile - Free Memory : 2093638
+2017-11-08 15:34:36 INFO  metricsFile - Memory Performance in Percentage : 49.0
+2017-11-08 15:34:36 INFO  metricsFile - 4 Memory Sample resulted in Violation
+2017-11-08 15:34:36 INFO  metricsFile - 4 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:34:36 INFO  metricsFile - =================================================
+2017-11-08 15:34:36 INFO  metricsFile - Total processors : 8
+2017-11-08 15:34:36 INFO  metricsFile - Average Systemload Load : 0.29
+2017-11-08 15:34:36 INFO  metricsFile - CPU Performance in Percentage : 3.625
+2017-11-08 15:34:36 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:35:47 INFO  metricsFile - =================================================
+2017-11-08 15:35:47 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:35:47 IST 2017
+2017-11-08 15:35:47 INFO  metricsFile - =================================================
+2017-11-08 15:35:47 INFO  metricsFile - Total Memory : 4263695
+2017-11-08 15:35:47 INFO  metricsFile - Free Memory : 2084802
+2017-11-08 15:35:47 INFO  metricsFile - Memory Performance in Percentage : 48.0
+2017-11-08 15:35:47 INFO  metricsFile - 5 Memory Sample resulted in Violation
+2017-11-08 15:35:47 INFO  metricsFile - 5 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:35:47 INFO  metricsFile - =================================================
+2017-11-08 15:35:47 INFO  metricsFile - Total processors : 8
+2017-11-08 15:35:47 INFO  metricsFile - Average Systemload Load : 0.29
+2017-11-08 15:35:47 INFO  metricsFile - CPU Performance in Percentage : 3.625
+2017-11-08 15:35:47 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:36:57 INFO  metricsFile - =================================================
+2017-11-08 15:36:57 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:36:57 IST 2017
+2017-11-08 15:36:57 INFO  metricsFile - =================================================
+2017-11-08 15:36:57 INFO  metricsFile - Total Memory : 4263695
+2017-11-08 15:36:57 INFO  metricsFile - Free Memory : 2074573
+2017-11-08 15:36:57 INFO  metricsFile - Memory Performance in Percentage : 48.0
+2017-11-08 15:36:57 INFO  metricsFile - 6 Memory Sample resulted in Violation
+2017-11-08 15:36:57 INFO  metricsFile - 6 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:36:57 INFO  metricsFile - =================================================
+2017-11-08 15:36:57 INFO  metricsFile - Total processors : 8
+2017-11-08 15:36:57 INFO  metricsFile - Average Systemload Load : 0.32
+2017-11-08 15:36:57 INFO  metricsFile - CPU Performance in Percentage : 4.0
+2017-11-08 15:36:57 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:38:08 INFO  metricsFile - =================================================
+2017-11-08 15:38:08 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:38:08 IST 2017
+2017-11-08 15:38:08 INFO  metricsFile - =================================================
+2017-11-08 15:38:08 INFO  metricsFile - Total Memory : 4263702
+2017-11-08 15:38:08 INFO  metricsFile - Free Memory : 2055368
+2017-11-08 15:38:08 INFO  metricsFile - Memory Performance in Percentage : 48.0
+2017-11-08 15:38:08 INFO  metricsFile - 7 Memory Sample resulted in Violation
+2017-11-08 15:38:08 INFO  metricsFile - 7 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:38:08 INFO  metricsFile - =================================================
+2017-11-08 15:38:08 INFO  metricsFile - Total processors : 8
+2017-11-08 15:38:08 INFO  metricsFile - Average Systemload Load : 0.1
+2017-11-08 15:38:08 INFO  metricsFile - CPU Performance in Percentage : 1.25
+2017-11-08 15:38:08 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:39:20 INFO  metricsFile - =================================================
+2017-11-08 15:39:20 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:39:20 IST 2017
+2017-11-08 15:39:20 INFO  metricsFile - =================================================
+2017-11-08 15:39:20 INFO  metricsFile - Total Memory : 4263707
+2017-11-08 15:39:20 INFO  metricsFile - Free Memory : 1995779
+2017-11-08 15:39:20 INFO  metricsFile - Memory Performance in Percentage : 46.0
+2017-11-08 15:39:20 INFO  metricsFile - 8 Memory Sample resulted in Violation
+2017-11-08 15:39:20 INFO  metricsFile - 8 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:39:20 INFO  metricsFile - =================================================
+2017-11-08 15:39:20 INFO  metricsFile - Total processors : 8
+2017-11-08 15:39:20 INFO  metricsFile - Average Systemload Load : 0.18
+2017-11-08 15:39:20 INFO  metricsFile - CPU Performance in Percentage : 2.25
+2017-11-08 15:39:20 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:40:30 INFO  metricsFile - =================================================
+2017-11-08 15:40:30 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:40:30 IST 2017
+2017-11-08 15:40:30 INFO  metricsFile - =================================================
+2017-11-08 15:40:30 INFO  metricsFile - Total Memory : 4263755
+2017-11-08 15:40:30 INFO  metricsFile - Free Memory : 1890597
+2017-11-08 15:40:30 INFO  metricsFile - Memory Performance in Percentage : 44.0
+2017-11-08 15:40:30 INFO  metricsFile - 9 Memory Sample resulted in Violation
+2017-11-08 15:40:30 INFO  metricsFile - 9 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:40:30 INFO  metricsFile - =================================================
+2017-11-08 15:40:30 INFO  metricsFile - Total processors : 8
+2017-11-08 15:40:30 INFO  metricsFile - Average Systemload Load : 0.28
+2017-11-08 15:40:30 INFO  metricsFile - CPU Performance in Percentage : 3.5
+2017-11-08 15:40:30 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:41:41 INFO  metricsFile - =================================================
+2017-11-08 15:41:41 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:41:41 IST 2017
+2017-11-08 15:41:41 INFO  metricsFile - =================================================
+2017-11-08 15:41:41 INFO  metricsFile - Total Memory : 4263802
+2017-11-08 15:41:41 INFO  metricsFile - Free Memory : 1771041
+2017-11-08 15:41:41 INFO  metricsFile - Memory Performance in Percentage : 41.0
+2017-11-08 15:41:41 INFO  metricsFile - 10 Memory Sample resulted in Violation
+2017-11-08 15:41:41 INFO  metricsFile - 10 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:41:41 INFO  metricsFile - =================================================
+2017-11-08 15:41:41 INFO  metricsFile - Total processors : 8
+2017-11-08 15:41:41 INFO  metricsFile - Average Systemload Load : 0.23
+2017-11-08 15:41:41 INFO  metricsFile - CPU Performance in Percentage : 2.875
+2017-11-08 15:41:41 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:42:53 INFO  metricsFile - =================================================
+2017-11-08 15:42:53 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:42:53 IST 2017
+2017-11-08 15:42:53 INFO  metricsFile - =================================================
+2017-11-08 15:42:53 INFO  metricsFile - Total Memory : 4263802
+2017-11-08 15:42:53 INFO  metricsFile - Free Memory : 1661249
+2017-11-08 15:42:53 INFO  metricsFile - Memory Performance in Percentage : 38.0
+2017-11-08 15:42:53 INFO  metricsFile - 11 Memory Sample resulted in Violation
+2017-11-08 15:42:53 INFO  metricsFile - 11 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+2017-11-08 15:42:53 INFO  metricsFile - =================================================
+2017-11-08 15:42:53 INFO  metricsFile - Total processors : 8
+2017-11-08 15:42:53 INFO  metricsFile - Average Systemload Load : 0.15
+2017-11-08 15:42:53 INFO  metricsFile - CPU Performance in Percentage : 1.875
+2017-11-08 15:42:53 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:44:05 INFO  metricsFile - =================================================
+2017-11-08 15:44:05 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:44:05 IST 2017
+2017-11-08 15:44:05 INFO  metricsFile - =================================================
+2017-11-08 15:44:05 INFO  metricsFile - Total Memory : 4192127
+2017-11-08 15:44:05 INFO  metricsFile - Free Memory : 3880303
+2017-11-08 15:44:05 INFO  metricsFile - Memory Performance in Percentage : 92.0
+2017-11-08 15:44:05 INFO  metricsFile - System memory performance is fine
+2017-11-08 15:44:05 INFO  metricsFile - =================================================
+2017-11-08 15:44:05 INFO  metricsFile - Total processors : 8
+2017-11-08 15:44:05 INFO  metricsFile - Average Systemload Load : 0.29
+2017-11-08 15:44:05 INFO  metricsFile - CPU Performance in Percentage : 3.625
+2017-11-08 15:44:05 INFO  metricsFile - System Average Systemload Load is fine
+2017-11-08 15:45:16 INFO  metricsFile - =================================================
+2017-11-08 15:45:16 INFO  metricsFile - Time when below Sample was taken : Wed Nov 08 15:45:16 IST 2017
+2017-11-08 15:45:16 INFO  metricsFile - =================================================
+2017-11-08 15:45:16 INFO  metricsFile - Total Memory : 4192189
+2017-11-08 15:45:16 INFO  metricsFile - Free Memory : 3734852
+2017-11-08 15:45:16 INFO  metricsFile - Memory Performance in Percentage : 89.0
+2017-11-08 15:45:16 INFO  metricsFile - System memory performance is fine
+2017-11-08 15:45:16 INFO  metricsFile - =================================================
+2017-11-08 15:45:16 INFO  metricsFile - Total processors : 8
+2017-11-08 15:45:16 INFO  metricsFile - Average Systemload Load : 0.89
+2017-11-08 15:45:16 INFO  metricsFile - CPU Performance in Percentage : 11.125
+2017-11-08 15:45:16 INFO  metricsFile - System Average Systemload Load is fine

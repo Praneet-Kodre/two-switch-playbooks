@@ -1,146 +1,165 @@
 =================================================
-Time when below Sample was taken : Fri Oct 27 11:54:27 IST 2017
+Time when below Sample was taken : Wed Nov 08 15:31:02 IST 2017
 =================================================
-Total Memory : 2714530
-Free Memory : 2375356
-Memory Performance in Percentage : 87.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.07
-CPU Performance in Percentage : 6.6875
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 11:55:37 IST 2017
-=================================================
-Total Memory : 2714694
-Free Memory : 2337602
-Memory Performance in Percentage : 86.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 0.99
-CPU Performance in Percentage : 6.1875
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 11:56:48 IST 2017
-=================================================
-Total Memory : 2714708
-Free Memory : 2322796
-Memory Performance in Percentage : 85.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 0.98
-CPU Performance in Percentage : 6.125
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 11:57:59 IST 2017
-=================================================
-Total Memory : 2714713
-Free Memory : 2305009
-Memory Performance in Percentage : 84.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.65
-CPU Performance in Percentage : 10.3125
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 11:59:10 IST 2017
-=================================================
-Total Memory : 2714713
-Free Memory : 2293832
-Memory Performance in Percentage : 84.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.28
-CPU Performance in Percentage : 8.0
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 12:00:20 IST 2017
-=================================================
-Total Memory : 2714680
-Free Memory : 2273297
-Memory Performance in Percentage : 83.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.82
-CPU Performance in Percentage : 11.375
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 12:01:31 IST 2017
-=================================================
-Total Memory : 2714701
-Free Memory : 2234086
-Memory Performance in Percentage : 82.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.72
-CPU Performance in Percentage : 10.75
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 12:02:42 IST 2017
-=================================================
-Total Memory : 2715138
-Free Memory : 2115815
-Memory Performance in Percentage : 77.0
-System memory performance is fine
-=================================================
-Total processors : 16
-Average Systemload Load : 1.54
-CPU Performance in Percentage : 9.625
-System Average Systemload Load is fine
-=================================================
-Time when below Sample was taken : Fri Oct 27 12:03:52 IST 2017
-=================================================
-Total Memory : 2715212
-Free Memory : 1986242
-Memory Performance in Percentage : 73.0
+Total Memory : 4263635
+Free Memory : 2161050
+Memory Performance in Percentage : 50.0
 1 Memory Sample resulted in Violation
 =================================================
-Total processors : 16
-Average Systemload Load : 1.58
-CPU Performance in Percentage : 9.875
+Total processors : 8
+Average Systemload Load : 0.19
+CPU Performance in Percentage : 2.375
 System Average Systemload Load is fine
 =================================================
-Time when below Sample was taken : Fri Oct 27 12:05:03 IST 2017
+Time when below Sample was taken : Wed Nov 08 15:32:13 IST 2017
 =================================================
-Total Memory : 2715259
-Free Memory : 1878487
-Memory Performance in Percentage : 69.0
+Total Memory : 4263635
+Free Memory : 2136621
+Memory Performance in Percentage : 50.0
 2 Memory Sample resulted in Violation
 =================================================
-Total processors : 16
-Average Systemload Load : 1.26
-CPU Performance in Percentage : 7.875
+Total processors : 8
+Average Systemload Load : 0.22
+CPU Performance in Percentage : 2.75
 System Average Systemload Load is fine
 =================================================
-Time when below Sample was taken : Fri Oct 27 12:06:14 IST 2017
+Time when below Sample was taken : Wed Nov 08 15:33:24 IST 2017
 =================================================
-Total Memory : 2715292
-Free Memory : 1769221
-Memory Performance in Percentage : 65.0
+Total Memory : 4263695
+Free Memory : 2100401
+Memory Performance in Percentage : 49.0
 3 Memory Sample resulted in Violation
-3 out of 15 Memory Monitoring samples resulted in violations from the permitted 20 violation so result is FAILURE
+3 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
 =================================================
-Total processors : 16
-Average Systemload Load : 1.72
-CPU Performance in Percentage : 10.75
+Total processors : 8
+Average Systemload Load : 0.15
+CPU Performance in Percentage : 1.875
 System Average Systemload Load is fine
 =================================================
-Time when below Sample was taken : Fri Oct 27 12:07:25 IST 2017
+Time when below Sample was taken : Wed Nov 08 15:34:36 IST 2017
 =================================================
-Total Memory : 2715335
-Free Memory : 1564749
-Memory Performance in Percentage : 57.0
+Total Memory : 4263695
+Free Memory : 2093638
+Memory Performance in Percentage : 49.0
 4 Memory Sample resulted in Violation
-4 out of 15 Memory Monitoring samples resulted in violations from the permitted 20 violation so result is FAILURE
+4 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
 =================================================
-Total processors : 16
-Average Systemload Load : 1.93
-CPU Performance in Percentage : 12.0625
+Total processors : 8
+Average Systemload Load : 0.29
+CPU Performance in Percentage : 3.625
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:35:47 IST 2017
+=================================================
+Total Memory : 4263695
+Free Memory : 2084802
+Memory Performance in Percentage : 48.0
+5 Memory Sample resulted in Violation
+5 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.29
+CPU Performance in Percentage : 3.625
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:36:57 IST 2017
+=================================================
+Total Memory : 4263695
+Free Memory : 2074573
+Memory Performance in Percentage : 48.0
+6 Memory Sample resulted in Violation
+6 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.32
+CPU Performance in Percentage : 4.0
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:38:08 IST 2017
+=================================================
+Total Memory : 4263702
+Free Memory : 2055368
+Memory Performance in Percentage : 48.0
+7 Memory Sample resulted in Violation
+7 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.1
+CPU Performance in Percentage : 1.25
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:39:20 IST 2017
+=================================================
+Total Memory : 4263707
+Free Memory : 1995779
+Memory Performance in Percentage : 46.0
+8 Memory Sample resulted in Violation
+8 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.18
+CPU Performance in Percentage : 2.25
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:40:30 IST 2017
+=================================================
+Total Memory : 4263755
+Free Memory : 1890597
+Memory Performance in Percentage : 44.0
+9 Memory Sample resulted in Violation
+9 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.28
+CPU Performance in Percentage : 3.5
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:41:41 IST 2017
+=================================================
+Total Memory : 4263802
+Free Memory : 1771041
+Memory Performance in Percentage : 41.0
+10 Memory Sample resulted in Violation
+10 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.23
+CPU Performance in Percentage : 2.875
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:42:53 IST 2017
+=================================================
+Total Memory : 4263802
+Free Memory : 1661249
+Memory Performance in Percentage : 38.0
+11 Memory Sample resulted in Violation
+11 out of 15 Memory Monitoring samples resulted in violations from the permitted 20% violation so result is FAILURE
+=================================================
+Total processors : 8
+Average Systemload Load : 0.15
+CPU Performance in Percentage : 1.875
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:44:05 IST 2017
+=================================================
+Total Memory : 4192127
+Free Memory : 3880303
+Memory Performance in Percentage : 92.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.29
+CPU Performance in Percentage : 3.625
+System Average Systemload Load is fine
+=================================================
+Time when below Sample was taken : Wed Nov 08 15:45:16 IST 2017
+=================================================
+Total Memory : 4192189
+Free Memory : 3734852
+Memory Performance in Percentage : 89.0
+System memory performance is fine
+=================================================
+Total processors : 8
+Average Systemload Load : 0.89
+CPU Performance in Percentage : 11.125
 System Average Systemload Load is fine
