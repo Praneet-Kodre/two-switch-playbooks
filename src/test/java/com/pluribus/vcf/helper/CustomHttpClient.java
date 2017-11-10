@@ -29,7 +29,7 @@ public class CustomHttpClient {
 
 	private CustomHttpClient() throws InvalidPropertiesFormatException, FileNotFoundException, IOException {
 		java.util.Properties prop = new Properties();
-	    prop.loadFromXML(new FileInputStream("Metrics.xml"));
+	    prop.loadFromXML(new FileInputStream("metrics.xml"));
 	    this.appTierPort = Integer.parseInt(prop.getProperty("appTierPort"));
 		this.enableHttpsForAppTier = true;
 	
