@@ -41,16 +41,15 @@ public class VcfMgr extends TestSetup{
 		 
     }
 	
-	@Parameters({ "password", "metrics", "vcfIp", "enableMetrics"})
+	@Parameters({ "password", "vcfIp", "enableMetrics"})
 	@Test(groups = { "smoke", "regression" }, description = "Login to VCF as test123 After Password Change")
-	public void loginTest123(@Optional("test123") String password, String metrics, String vcfIp,@Optional("0")  String enableMetrics) throws Exception {
+	public void loginTest123(@Optional("test123") String password, String vcfIp,@Optional("0")  String enableMetrics) throws Exception {
 		login.login(vcfUserName, password);
 		Thread.sleep(1000);
 		login.waitForLogoutButton();
 
 		if(Integer.parseInt(enableMetrics)==1) {
-		File metricsFile = new File(metrics);
-		monitorMetrics = new MonitorMetrics(getDriver(), metricsFile, vcfIp, vcfUserName, password);
+		monitorMetrics = new MonitorMetrics(getDriver(), vcfIp, vcfUserName, password);
 		t = new Thread(monitorMetrics);
 		t.start();
 		}
